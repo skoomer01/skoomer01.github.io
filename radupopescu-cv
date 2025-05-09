@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Radu Andrei Popescu - CV</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0 auto;
+      padding: 2rem;
+      max-width: 800px;
+      line-height: 1.6;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    .section {
+      margin-top: 2rem;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .contact, .links {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Radu Andrei Popescu</h1>
+  <p><strong>Role:</strong> Student Software Engineer</p>
+
+  <div class="contact">
+    <p><strong>Location:</strong> Eindhoven, Netherlands</p>
+    <p><strong>Email:</strong> <a href="mailto:radu.a.popescu10@gmail.com">radu.a.popescu10@gmail.com</a></p>
+    <p><strong>Phone:</strong> +40 722 383 405</p>
+    <p><strong>Date of Birth:</strong> 10/02/2002</p>
+    <p><strong>Nationality:</strong> Romanian</p>
+  </div>
+
+  <div class="links">
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/radu-andrei-popescu-a67ba3290">radu-andrei-popescu</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/skoomer01">skoomer01</a></p>
+  </div>
+
+  <div class="section">
+    <h2>Employment History</h2>
+    <h3>Developer and SCRUM Master - Canon Inc. (via Fontys University)</h3>
+    <p><em>March 2023 – June 2023</em></p>
+    <ul>
+      <li>Created a Regression Test Suite visualization app using Java Spring Boot, React, MSSQL, and Docker.</li>
+      <li>Implemented features: login, user management, test branch management, error filtering, search, and data storage.</li>
+      <li>Involved in analysis, documentation, design (UML, wireframes), development, testing, and final presentation.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>Bachelor ICT & Software Development, Game Design</strong> — Fontys University of Applied Sciences (2021–Present)</li>
+      <li><strong>Fontys Venlo PBL Workshop</strong> — Fontys Venlo (Feb 2019)</li>
+      <li><strong>High School</strong> — Bucharest International Theoretical High School of Informatics (2016–2020)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Extra-Curricular Activities</h2>
+    <h3>Volunteer - New Trees for New Life</h3>
+    <p><em>March 2018</em></p>
+    <ul>
+      <li>Planted over 2000 trees with 300+ students in collaboration with local government.</li>
+      <li>Promoted sustainability and raised environmental awareness.</li>
+    </ul>
+
+    <h3>Exam Proctor - Lumina Foundation</h3>
+    <p><em>November 2019</em></p>
+    <ul>
+      <li>Supervised 80 junior students during exam sessions in collaboration with professors.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Skills</h2>
+    <ul>
+      <li>C++, C#, Java (Spring Boot), Python, MySQL, R</li>
+      <li>HTML, CSS, React</li>
+      <li>GitHub, GitLab CI/CD</li>
+      <li>Unity, Unity 3D, Godot</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Languages</h2>
+    <ul>
+      <li>Romanian – Native</li>
+      <li>English – Fluent</li>
+    </ul>
+  </div>
+
+</body>
+</html>
