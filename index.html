@@ -9,19 +9,29 @@
   <style>
     body {
       font-family: 'Source Code Pro', monospace;
-      background-color: #0e1117;
       color: #c9d1d9;
       margin: 0;
       display: flex;
       justify-content: center;
+      overflow-x: hidden;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: #000;
     }
 
     .container {
       max-width: 800px;
       width: 100%;
       padding: 2rem;
+      background-color: rgba(14, 17, 23, 0.9);
     }
 
+    /* Rest of your existing styles remain the same */
     header {
       text-align: center;
       padding-bottom: 2rem;
@@ -64,6 +74,7 @@
 </head>
 
 <body>
+  <canvas id="gameCanvas"></canvas>
   <div class="container">
     <header>
       <h1>Radu Andrei Popescu</h1>
@@ -133,6 +144,89 @@
       <p>Romanian (Native)<br>English (Fluent)<br>Portuguese (A1)</p>
     </section>
   </div>
+
+  <script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    const cellSize = 17;
+    let width, height, cols, rows;
+    let grid = [];
+
+    function resizeCanvas() {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+      cols = Math.floor(width / cellSize);
+      rows = Math.floor(height / cellSize);
+    }
+
+    function createGrid() {
+      grid = new Array(cols).fill().map(() => 
+        new Array(rows).fill().map(() => Math.random() > 0.9 ? 1 : 0)
+      );
+    }
+
+    function countNeighbors(x, y) {
+      let sum = 0;
+      for (let i = -1; i < 2; i++) {
+        for (let j = -1; j < 2; j++) {
+          const col = (x + i + cols) % cols;
+          const row = (y + j + rows) % rows;
+          sum += grid[col][row];
+        }
+      }
+      return sum - grid[x][y];
+    }
+
+    function updateGrid() {
+      const nextGen = grid.map(arr => [...arr]);
+      
+      for (let x = 0; x < cols; x++) {
+        for (let y = 0; y < rows; y++) {
+          const neighbors = countNeighbors(x, y);
+          
+          if (grid[x][y] === 1) {
+            nextGen[x][y] = (neighbors === 2 || neighbors === 3) ? 1 : 0;
+          } else {
+            nextGen[x][y] = neighbors === 3 ? 1 : 0;
+          }
+        }
+      }
+      grid = nextGen;
+    }
+
+    function draw() {
+      ctx.fillStyle = '#000';
+      ctx.fillRect(0, 0, width, height);
+      
+      ctx.fillStyle = '#58a6ff';
+      for (let x = 0; x < cols; x++) {
+        for (let y = 0; y < rows; y++) {
+          if (grid[x][y] === 1) {
+            ctx.fillRect(x * cellSize, y * cellSize, cellSize - 1, cellSize - 1);
+          }
+        }
+      }
+    }
+
+    function animate() {
+      updateGrid();
+      draw();
+      requestAnimationFrame(animate);
+    }
+
+    // Initialize
+    resizeCanvas();
+    createGrid();
+    animate();
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      createGrid();
+    });
+  </script>
 </body>
 
 </html>
