@@ -73,8 +73,14 @@
     content: "_";
     animation: blink 1s step-end infinite;
     color: #c9d1d9;
-  }
-
+    }
+    .footer {
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      color: white;
+      text-align: center;
+    }
   @keyframes blink {
     50% { opacity: 0; }
   }
@@ -96,26 +102,17 @@
     <section>
       <h2>> Employment History</h2>
       <p><strong>d-centralize</strong> Software Developer<br>February 2024 — June 2024</p>
-      <ul>
-        <li>Contributed to <a href="https://www.pro6pp.nl/en" style="color: #f0f0f0; text-decoration: none; text-decoration-color: rgba(255, 255, 255, 0.8);">Pro6PP</a>, a SaaS platform specializing in geospatial APIs for postal codes, street names, and coordinates across multiple countries. I was tasked with engineered scalable APIs and pipelines to process and validate multi-gigabyte datasets, ensuring high accuracy and compliance with regional geographic standards.</li>
-        <li>Designed and implemented a proprietary algorithm to calculate distances between postal codes, improving time needed to proccess the datasets by halving it.</li>
-        <li>Developed and worked with technologies such as Python, Flask, Google Cloud Platform, PostgreSQL and libraries such as Pandas and specific tools liek Docker and Kubernetes.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>> Education</h2>
-      <ul>
-        <li><strong>BACHELOR ICT & Software Development, Game Design</strong>, Fontys University of Applied Sciences<br>August 2021 — Present</li>
-        <li><strong>Minor Abroad in Computer Science</strong>, Instituto Superior de Engenharia de Lisboa<br>February 2025 - July 2025</li>
-        <li><strong>Fontys Venlo PBL Workshop</strong>, Fontys Venlo University of Applied Sciences<br>February 2019 — February 2019</li>
+      <ul style="list-style-type:square">
+        <p>Contributed to <a href="https://www.pro6pp.nl/en" style="color: #f0f0f0; text-decoration: none; text-decoration-color: rgba(255, 255, 255, 0.8);">Pro6PP</a>, a SaaS platform specializing in geospatial APIs for postal codes, street names, and coordinates across multiple countries. I was tasked with engineered scalable APIs and pipelines to process and validate multi-gigabyte datasets, ensuring high accuracy and compliance with regional geographic standards.</li>
+        <p>Designed and implemented a proprietary algorithm to calculate distances between postal codes, improving time needed to proccess the datasets by halving it.</li>
+        <p>Developed and worked with technologies such as Python, Flask, Google Cloud Platform, PostgreSQL and libraries such as Pandas and specific tools liek Docker and Kubernetes.</li>
       </ul>
     </section>
 
     <section>
       <h2>> Projects</h2>
       <p><strong>Canon Inc.</strong> Developed a Dashboard and Managed a Team <br>March 2023 — June 2023</p>
-      <ul>
+      <ul style="list-style-type:square">
         <p>Created and implemented a Regression Test suite visualisation solution using RESTful API backend built with Java and Springboot Framework, a React frontend styled with CSS, and a MSSQL database, deployed on Docker, the key features that the application and website provided were: log in, user creation, test branch management, regression test management, error management, filtering and searching option and database storage.</li>
         <p>Contributed to multiple phases such as:</li>
         <ul>
@@ -136,21 +133,30 @@
     </section>
 
     <section>
+      <h2>> Education</h2>
+      <ul style="list-style-type:square">
+        <li><strong>BACHELOR ICT & Software Development, Game Design</strong>, Fontys University of Applied Sciences<br>August 2021 — Present</li>
+        <li><strong>Minor Abroad in Computer Science</strong>, Instituto Superior de Engenharia de Lisboa<br>February 2025 - July 2025</li>
+        <li><strong>Fontys Venlo PBL Workshop</strong>, Fontys Venlo University of Applied Sciences<br>February 2019 — February 2019</li>
+      </ul>
+    </section>
+
+    <section>
       <h2>> Extra-curricular Activities</h2>
       <p><strong>Volunteer</strong> at New trees for New life, Prahova County, Romania<br>March 2018 — March 2018</p>
-      <ul>
-        <li>Collaborated with regional governance in a large-scale tree planting initiative aimed at promoting sustainability.</li>
-        <li>Engaged with over 300 high school students from across Romania to contribute to the environmental cause by planting over 2000 trees.</li>
-        <li>Supported the partnership between the volunteering event and the regional government of Prahova County, Romania, to foster community involvement in sustainable practices.</li>
-        <li>Demonstrated leadership and teamwork skills while working alongside fellow students to achieve the shared goal of enhancing the environment through tree planting.</li>
-        <li>Raised awareness about the importance of sustainability and environmental stewardship among the participating students and the broader community.</li>
+      <ul style="list-style-type:square">
+        <li>Collaborated with regional governance in a large-scale tree planting initiative aimed at promoting sustainability.</li><br>
+        <li>Engaged with over 300 high school students from across Romania to contribute to the environmental cause by planting over 2000 trees.</li><br>
+        <li>Supported the partnership between the volunteering event and the regional government of Prahova County, Romania, to foster community involvement in sustainable practices.</li><br>
+        <li>Demonstrated leadership and teamwork skills while working alongside fellow students to achieve the shared goal of enhancing the environment through tree planting.</li><br>
+        <li>Raised awareness about the importance of sustainability and environmental stewardship among the participating students and the broader community.</li><br>
       </ul>
 
       <p><strong>Exam Proctor</strong> at Lumina Foundation, Bucharest International Theoretical High School of Informatics<br>November 2019 — November 2019</p>
-      <ul>
-        <li>Collaborated with an educational foundation, including senior stakeholders, in proctoring an exam for junior students</li>
-        <li>Engaged with 80 junior students and several professors from across Bucharest</li>
-        <li>Demonstrated patience, surveillance and comprehension while supervising test-takers in a quiet and controlled environment</li>
+      <ul style="list-style-type:square">
+        <li>Collaborated with an educational foundation, including senior stakeholders, in proctoring an exam for junior students</li><br>
+        <li>Engaged with 80 junior students and several professors from across Bucharest</li><br>
+        <li>Demonstrated patience, surveillance and comprehension while supervising test-takers in a quiet and controlled environment</li><br>
       </ul>
     </section>
 
@@ -168,8 +174,11 @@
 
     <section>
       <h2>Languages</h2>
-      <p>Romanian (Native)<br>English (Fluent)<br>Portuguese (A1)</p>
+      <p>Romanian (Native)<br>English (Fluent)<br>Turkish (A1)<br>Portuguese (A1)</p>
     </section>
+    <div class="footer">
+      <p>Last update 05/08/2025</p>
+    </div>
   </div>
 
   <script>
